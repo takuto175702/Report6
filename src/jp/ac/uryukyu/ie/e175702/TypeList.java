@@ -11,8 +11,18 @@ public class TypeList {
             add("ika");
         }
     };
-    public static void question (String s){
 
+    int num;
+    String qus;
+
+    public void getTypelist() {
+        num = typelist.size();
+    }
+
+    public void question(int num) {
+        Random rnd = new Random();
+        int ran = rnd.nextInt(num - 1);
+        qus = typelist.get(ran);
 
     }
 }
