@@ -1,29 +1,35 @@
-package jp.ac.uryukyu.ie.e175702;
+/*package jp.ac.uryukyu.ie.e175702;
 
-import java.util.*;
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 
 public class TypeList {
-    List<String> typelist = new ArrayList<String>() {
-        {
-            add("ao");
-            add("kai");
-            add("ika");
+    public static void typelist (){
+
+        try{
+            FileReader file = new FileReader("/Users/e175702/IdeaProjects/report6/src/jp/ac/uryukyu/ie/e175702/Test.txt");
+            BufferedReader br = new BufferedReader(file);
+
+            String line = br.readLine();
+            String[] typelist = line.split(",",0);
+
+            int num;
+            num = typelist.length;
+
+        }catch(FileNotFoundException e){
+            System.out.println(e);
+        }catch(IOException e){
+            System.out.println(e);
         }
-    };
-
-    int num;
-    String qus;
-
-    public void getTypelist() {
-        num = typelist.size();
     }
 
-    public void question(int num) {
-        Random rnd = new Random();
-        int ran = rnd.nextInt(num - 1);
-        qus = typelist.get(ran);
-
+    public String Question(int num){
+        int ran = (int)(Math.random()*num);//0~2の間でランダムに生成される
     }
 }
-
+*/
